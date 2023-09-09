@@ -1,0 +1,256 @@
+ /* CSS reset*/
+ *{
+   margin:0;
+   padding: 0;  
+   
+ }
+ 
+html{
+  scroll-behavior: smooth;
+}
+
+  /* CSS variables  */
+  :root{
+    --navbar-height : 59px;
+  }
+  /*Navigation Bar*/
+  #navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    font-family: 'DM Serif Display', serif;
+    position: sticky;
+    z-index: 3;
+    /* height: 50px; */
+  }
+
+  /*Navigation bar : logo and image*/
+#logo{
+    margin: 14px 5px;
+}
+#logo img{
+    height: 70px;
+    border-radius: 50%;
+    border:2px solid white;
+}
+#navbar::before{
+    content:"";
+    background-color: black;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+  }
+  /*list styling*/
+  #navbar ul{
+display: flex;
+  }
+ 
+  
+  #navbar ul li{
+    list-style: none;
+    font-size: 1.3em;
+  }
+/*we will give padding in a not in li because we wnat to change the properties of a if we hower even its blank space */ 
+#navbar ul li a{
+/*display block bcuz we need to give padding*/
+display: block;
+padding: 3px 22px ;
+border-radius: 20px;
+text-decoration: none;
+color:white;
+}
+#navbar ul li a:hover{
+/*display block bcuz we need to give padding*/
+display: block;
+padding: 3px 22px ;
+border-radius: 20px;
+text-decoration: none;
+color:black;
+background-color: white;
+}
+ /*home section*/
+ #home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+ }
+ #home::before{
+    content:"";
+    background:url('../img/pexels-pixabay-326279.jpg') no-repeat center center /cover ;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 75%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+  }
+   #home p{
+   color: white;
+    text-align: center;
+    font-size: 1.2rem;
+   }
+
+   #home h1{
+   color: white;
+    text-align: center;
+   }
+
+/*services section*/
+
+#services{
+    margin:34px;
+display: flex;
+}
+#services .box{
+border: 2px solid brown;
+padding: 34px;
+margin:3px 6px;
+border-radius: 23px ;
+background-color: rgb(255, 236, 236);
+}
+
+#services .box img{
+    height: 150px;
+    margin: auto;
+    display: block;
+
+    }
+
+/*client section*/
+#best-sellers{
+ 
+height: 400px;
+position: relative;
+/* background-color: white; */
+display: flex;
+/* flex-direction: column; */
+justify-content: space-between;
+align-items: center;
+
+}
+#best-sellers::before{
+  content: "";
+  position: absolute;
+  background: url('../bg.jpg');
+  height: 100%;
+  width: 100%;
+  z-index: -3;
+  opacity: 0.3;
+}
+/*contact section*/
+#contact{
+  position: relative;
+}
+#contact::before{
+  content: "";
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity:0.7;
+  background: url('../contact.jpg') no-repeat center center/cover ;
+
+}
+
+footer{
+  background-color: black;
+  color: white;
+ text-align: center;
+ padding: 3px;
+}
+
+#contact-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 34px;
+}
+#contact-box form{
+ width: 40%;
+}
+#contact-box .btn{
+  display: block;
+  width: 250px;
+  margin: auto;
+ 
+}
+#contact-box label{
+ font-size: 1.3rem;
+}
+
+#contact-box input, #contact-box textarea{
+  width:100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+  /*utility Classes*/
+  /*we use utility classes as they are reusable*/
+  .h-primary{
+font-size: 2.8rem;
+padding: 12px;
+  }
+  .h-secondary{
+    font-size: 2rem;
+padding: 12px;
+  }
+  .btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background:rgb(85, 23, 23);
+    color: white;
+    border-radius: 13px;
+    margin: 17px;
+    font-size: 1.1rem;
+cursor: pointer;
+  }
+  .center{
+    text-align: center;
+  }
+  .section-4-list{
+    height: 100%;
+    width: calc(100%-230px);
+    display: flex;
+    overflow-x: auto ;
+}
+
+.section-4-item{
+    width: 232px;
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+}
+.section-4-item img{
+    max-width: 200px;
+    max-height: 200px;
+}
+.section-4-item-head{
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.section-4-item-price{
+    margin-top: 12px;
+    font-size: 16px;
+    color: #388e3c;
+}
+.section-4-item-explore{
+  opacity: 0.6;
+  margin-top: 12px;
+  font-weight: 300;
+  font-size: 12px;
+ 
+}
